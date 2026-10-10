@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="weather-app-container">
+        <h1>Weather Dashboard</h1>
+        
+        <div class="controls">
+            <select id="city-select">
+                <option value=""></option>
+                <option value="new york">New York</option>
+                <option value="los angeles">Los Angeles</option>
+                <option value="chicago">Chicago</option>
+                <option value="paris">Paris</option>
+                <option value="tokyo">Tokyo</option>
+                <option value="london">London</option>
+            </select>
+            <button id="get-weather-btn">Get Weather</button>
+        </div>
+
+        <div id="weather-info">
+            <div id="location"></div>
+            <div id="weather-main"></div>
+            <img id="weather-icon" src="" alt="Weather Icon">
+            <div id="main-temperature"></div>
+            
+            <div class="weather-details">
+                <div class="detail-card">
+                    <div class="detail-label">Feels Like</div>
+                    <div id="feels-like" class="detail-value"></div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-label">Humidity</div>
+                    <div id="humidity" class="detail-value"></div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-label">Wind Speed</div>
+                    <div id="wind" class="detail-value"></div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-label">Wind Gust</div>
+                    <div id="wind-gust" class="detail-value"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

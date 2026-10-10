@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photography Exhibit</title>
+  <!-- Tailwind CSS über CDN laden -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+
+  <!-- 
+    User Story 1-4: main-container mit Grid-Classes 
+    - grid: Erstellt den CSS Grid Container
+    - grid-cols-1 md:grid-cols-2 lg:grid-cols-3: Definiert die Spaltenanzahl (responsiv)
+    - gap-6: Setzt den Abstand zwischen den Reihen und Spalten
+  -->
+  <div class="main-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    
+    <!-- Card 1: Colosseum -->
+    <!-- User Story 5-7: card mit rounded und padding -->
+    <div class="card bg-white rounded-lg p-6 shadow-md">
+      <!-- User Story 8-10, 15: img mit src, alt und rounded -->
+      <img 
+        src="https://cdn.freecodecamp.org/curriculum/labs/colosseo.jpg" 
+        alt="Das Kolosseum in Rom bei Sonnenuntergang" 
+        class="w-full h-48 object-cover rounded-md mb-4"
+      />
+      <!-- User Story 11, 12, 16, 17: subheading mit Text, font-weight und font-size -->
+      <h3 class="subheading font-bold text-xl text-gray-800 mb-2">Eternal City</h3>
+      <!-- User Story 13, 14, 18: description mit Text und font-size -->
+      <p class="description text-gray-600 text-base">
+        Ein Blick auf das antike Kolosseum, das im warmen Licht des römischen Abends erstrahlt.
+      </p>
+    </div>
+
+    <!-- Card 2: Alps -->
+    <div class="card bg-white rounded-lg p-6 shadow-md">
+      <img 
+        src="https://cdn.freecodecamp.org/curriculum/labs/alps.jpg" 
+        alt="Schneebedeckte Alpen mit klarem blauem Himmel" 
+        class="w-full h-48 object-cover rounded-md mb-4"
+      />
+      <h3 class="subheading font-bold text-xl text-gray-800 mb-2">Mountain High</h3>
+      <p class="description text-gray-600 text-base">
+        Die majestätischen Gipfel der Alpen, bedeckt mit frischem Schnee unter einem kristallklaren Himmel.
+      </p>
+    </div>
+
+    <!-- Card 3: Sea -->
+    <div class="card bg-white rounded-lg p-6 shadow-md">
+      <img 
+        src="https://cdn.freecodecamp.org/curriculum/labs/sea.jpg" 
+        alt="Ruhige See bei Sonnenuntergang mit Booten" 
+        class="w-full h-48 object-cover rounded-md mb-4"
+      />
+      <h3 class="subheading font-bold text-xl text-gray-800 mb-2">Ocean Breeze</h3>
+      <p class="description text-gray-600 text-base">
+        Die ruhige See spiegelt die Farben des Sonnenuntergangs wider, während Boote sanft schaukeln.
+      </p>
+    </div>
+
+  </div>
+
+</body>
+</html>

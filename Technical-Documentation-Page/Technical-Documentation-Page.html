@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JS Documentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav id="navbar">
+    <header>JavaScript Basics</header>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    <a class="nav-link" href="#Variables">Variables</a>
+    <a class="nav-link" href="#Functions">Functions</a>
+    <a class="nav-link" href="#Loops">Loops</a>
+    <a class="nav-link" href="#Objects">Objects</a>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>JavaScript is a programming language used to make web pages interactive.</p>
+      <p>It runs in the browser and can update content dynamically.</p>
+      <code>alert("Hello, world!");</code>
+    </section>
+
+    <section class="main-section" id="Variables">
+      <header>Variables</header>
+      <p>Variables are containers for storing data values.</p>
+      <p>Use <code>let</code>, <code>const</code>, or <code>var</code> to declare them.</p>
+      <ul>
+        <li><code>let</code> – block-scoped, reassignable.</li>
+        <li><code>const</code> – block-scoped, not reassignable.</li>
+        <li><code>var</code> – function-scoped, older style.</li>
+      </ul>
+      <code>let name = "Alice";</code>
+    </section>
+
+    <section class="main-section" id="Functions">
+      <header>Functions</header>
+      <p>Functions are reusable blocks of code.</p>
+      <p>Defined using the <code>function</code> keyword.</p>
+      <code>
+        function greet(name) {<br>
+          return "Hello, " + name;<br>
+        }
+      </code>
+    </section>
+
+    <section class="main-section" id="Loops">
+      <header>Loops</header>
+      <p>Loops help run the same code multiple times.</p>
+      <p>The <code>for</code> loop is commonly used.</p>
+      <ul>
+        <li>Initialize, condition, increment.</li>
+        <li>Executes until condition is false.</li>
+      </ul>
+      <code>
+        for (let i = 0; i < 3; i++) {<br>
+          console.log(i);<br>
+        }
+      </code>
+    </section>
+
+    <section class="main-section" id="Objects">
+      <header>Objects</header>
+      <p>Objects store key-value pairs.</p>
+      <p>Used to represent real-world entities.</p>
+      <code>
+        const person = {<br>
+          name: "Bob",<br>
+          age: 30<br>
+        };
+      </code>
+      <ul>
+        <li>Access properties with dot notation.</li>
+        <li>Can contain methods (functions).</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* General table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 48px;
+}
+
+/* Background gradients for row status */
+tr[class="read"] {
+  background-image: linear-gradient(135deg, #e8f5e8, #a8e6a3);
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(135deg, #fff3cd, #ffeaa7);
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(135deg, #e3f2fd, #90caf9);
+}
+
+/* Span display for inline-block layout */
+span {
+  display: inline-block;
+}
+
+/* Status span styling based on row class */
+tr[class="to-read"] span[class="status"] {
+  border: 3px solid purple;
+  background-image: radial-gradient(circle, #ffcccb, #ff6666);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 3px solid #1976d2;
+  background-image: linear-gradient(to right, #bbdefb, #90caf9);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+tr[class="read"] span[class="status"] {
+  border: 3px solid green;
+  background-image: linear-gradient(to right, #c8e6c9, #81c784);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* Rate and status size and padding */
+span[class="status"],
+span[class^="rate"] {
+  height: 1.2em;
+  width: 1.2em;
+  padding: 5px;
+}
+
+/* Styling for inner rating stars */
+span[class^="rate"] > span {
+  border: 2px solid #ff9800;
+  border-radius: 50%;
+  margin: 0 2px;
+  height: 8px;
+  width: 8px;
+  background-color: #fff;
+}
+
+/* Fill stars based on rating */
+span[class~="one"] span:nth-child(1) {
+  background-image: linear-gradient(to top, #ff9800, #ffb74d);
+}
+
+span[class~="two"] span:nth-child(-n+2) {
+  background-image: linear-gradient(to top, #ff9800, #ffb74d);
+}
+
+span[class~="three"] span {
+  background-image: linear-gradient(to top, #ff9800, #ffb74d);
+}

@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0f0f13;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#drum-machine {
+    background: #1a1a24;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 242, 254, 0.2);
+    border: 1px solid #2a2a3a;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    color: #00f2fe;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
+}
+
+#display {
+    background: #09090d;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4facfe;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 1px solid #1f1f2e;
+    min-height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
+}
+
+#pad-bank {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.drum-pad {
+    background: linear-gradient(145deg, #232332, #1c1c28);
+    border: 1px solid #33334c;
+    padding: 25px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e0e0e0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.08s ease-in-out;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.drum-pad:hover {
+    background: #28283d;
+    color: #fff;
+    border-color: #00f2fe;
+}
+
+/* Wird per JS bei Aktivierung getriggert (Klick oder Taste) */
+.drum-pad.active, .drum-pad:active {
+    transform: scale(0.95);
+    background: linear-gradient(145deg, #00f2fe, #4facfe);
+    color: #0f0f13;
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.8);
+    border-color: transparent;
+}
