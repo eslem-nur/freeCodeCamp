@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- SEO & Meta Etiketleri -->
+    <title>Free Code Camp Projeleri | Eslem Nur Çetin</title>
+    <meta name="description" content="Free Code Camp sertifikasyon projeleri ve kod örnekleri. Eslem Nur Çetin'in geliştirme yolculuğu.">
+    <meta name="keywords" content="Free Code Camp, Python, C#, JavaScript, Web Development, Programming, Eslem Nur Çetin">
+    <meta name="author" content="Eslem Nur Çetin">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Code Camp Projeleri | Eslem Nur Çetin">
+    <meta property="og:description" content="Free Code Camp sertifikasyon projeleri ve kod örnekleri.">
+    <meta property="og:image" content="https://i.pinimg.com/736x/98/a5/ca/98a5ca07841720013645e7a35330fa02.jpg">
+    <meta property="og:url" content="https://eslem-nur.github.io/freeCodeCamp/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="tr_TR">
+
+    <!-- Font Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600&family=Inter:wght@300;400;600&display=swap" as="style">
+  
+    <!-- Fontlar & İkonlar -->
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    
+</head>
+<body>
+
+    <!-- NAVIGASYON (Ana siteyle aynı) -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="https://eslemnur.github.io/official/" class="logo">
+                    <span>بسم الله</span> Eslem Nur Çetin
+                </a>
+               <div class="nav-controls">
+                    <!-- Dil Toggle Butonu -->
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="theme-toggle" onclick="toggleLangMenu()" aria-label="Dili Değiştir" style="width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: bold;">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                        </button>
+                        <div class="lang-dropdown-menu">
+                            <a href="https://eslemnur.github.io/official/index.html"> Türkçe</a>
+                            <a href="https://eslemnur.github.io/official/en.html">󠁧󠁢󠁥󠁮󠁧󠁿 English</a>
+                            <a href="https://eslemnur.github.io/official/de.html"> Deutsch</a>
+                            <a href="https://eslemnur.github.io/official/fr.html"> Français</a>
+                            <a href="https://eslemnur.github.io/official/ar.html"> العربية</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Tema Toggle -->
+                    <button id="themeToggle" class="theme-toggle" aria-label="Temayı Değiştir"><i class="fas fa-moon" aria-hidden="true"></i></button>
+                    
+                    <!-- Hamburger Menü -->
+                    <button class="hamburger" onclick="toggleMenu()" aria-label="Menüyü Aç">☰</button>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="https://eslemnur.github.io/official/#about">Hakkımda</a>
+                    <a href="#projects">Projeler</a>
+                    <a href="https://eslemnur.github.io/official/#shop">Shop</a>
+                    <a href="https://eslemnur.github.io/official/#contact">İletişim</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Free Code Camp <br><span class="gradient-text">Projeleri</span></h1>
+            <p class="hero-subtitle">Free Code Camp sertifikasyon sürecimde tamamladığım projeler ve kod örnekleri.</p>
+            <div class="hero-badges">
+                <span class="badge">Python</span>
+                <span class="badge">C#</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">HTML/CSS</span>
+                <span class="badge">Algorithms</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; width: 100%; max-width: 100%; margin: 20px auto;">
+                <a href="#projects" class="btn-primary">Projelere Git</a>
+                <a href="https://www.freecodecamp.org/" target="_blank" class="btn-primary">FCC'yi Ziyaret Et</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BECERİLER (FCC odaklı) -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Öğrendiklerim</h2>
+            
+            <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap;">
+                <button class="tab-btn skill-tab-btn active" onclick="switchSkillTab('programming')" style="padding: 10px 25px; border: 2px solid var(--border-color); background: transparent; color: var(--text-light); border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Programlama Dilleri</button>
+                <button class="tab-btn skill-tab-btn" onclick="switchSkillTab('certifications')" style="padding: 10px 25px; border: 2px solid var(--border-color); background: transparent; color: var(--text-light); border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Sertifikalar</button>
+            </div>
+
+            <!-- Programlama Dilleri İçeriği -->
+            <div id="group-programming" class="skill-group active" style="display: grid;">
+                <div class="skills-container">
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon language-icon python-bg">Py</div>
+                            <div class="skill-title">Python</div>
+                        </div>
+                        <ul class="skill-list">
+                            <li>Data Structures & Algorithms</li>
+                            <li>Object-Oriented Programming</li>
+                            <li>File I/O & Regular Expressions</li>
+                            <li>Scientific Computing with NumPy/Pandas</li>
+                            <li>Data Visualization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon language-icon csharp-bg">C#</div>
+                            <div class="skill-title">C# .NET</div>
+                        </div>
+                        <ul class="skill-list">
+                            <li>.NET Core Fundamentals</li>
+                            <li>Entity Framework</li>
+                            <li>ASP.NET Basics</li>
+                            <li>Debugging & Testing</li>
+                            <li>Console Applications</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon language-icon javascript-bg">JS</div>
+                            <div class="skill-title">JavaScript</div>
+                        </div>
+                        <ul class="skill-list">
+                            <li>ES6+ Modern Syntax</li>
+                            <li>DOM Manipulation</li>
+                            <li>Asynchronous Programming</li>
+                            <li>API Integration</li>
+                            <li>Functional Programming</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon language-icon html-bg">&lt;/&gt;</div>
+                            <div class="skill-title">Web Technologies</div>
+                        </div>
+                        <ul class="skill-list">
+                            <li>HTML5 Semantic Markup</li>
+                            <li>CSS3 & Flexbox/Grid</li>
+                            <li>Responsive Design</li>
+                            <li>Accessibility (ARIA)</li>
+                            <li>Version Control (Git)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sertifikalar İçeriği -->
+            <div id="group-certifications" class="skill-group" style="display: none;">
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary_large.svg" alt="Free Code Camp Logo" loading="lazy" style="background: #F0DB4F; object-fit: contain; padding: 20px;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Python for Everybody</div>
+                            <p class="project-desc">Python programming fundamentals, data structures, and web scraping certified through Free Code Camp curriculum.</p>
+                            <a href="https://github.com/eslem-nur/freeCodeCamp" target="_blank" rel="noopener noreferrer" class="btn-outline">GitHub Repo</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary_large.svg" alt="Free Code Camp Logo" loading="lazy" style="background: #F0DB4F; object-fit: contain; padding: 20px;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Responsive Web Design</div>
+                            <p class="project-desc">HTML5, CSS3, Flexbox, and CSS Grid projects demonstrating responsive design principles.</p>
+                            <a href="https://github.com/eslem-nur/fcc-rwd" target="_blank" rel="noopener noreferrer" class="btn-outline">GitHub Repo</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary_large.svg" alt="Free Code Camp Logo" loading="lazy" style="background: #F0DB4F; object-fit: contain; padding: 20px;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">JavaScript Algorithms & Data Structures</div>
+                            <p class="project-desc">Algorithm challenges, data structure implementations, and JavaScript proficiency certification.</p>
+                            <a href="https://github.com/eslem-nur/fcc-javascript" target="_blank" rel="noopener noreferrer" class="btn-outline">GitHub Repo</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJELER -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projelerim</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px; color: var(--text-light);">
+                Free Code Camp müfredatında tamamladığım sertifikasyon projeleri ve ek geliştirmelerim.
+            </p>
+
+            <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap;">
+                <button class="tab-btn project-tab-btn active" onclick="switchProjectTab('python')" style="padding: 10px 25px; border: 2px solid var(--border-color); background: transparent; color: var(--text-light); border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Python</button>
+                <button class="tab-btn project-tab-btn" onclick="switchProjectTab('web')" style="padding: 10px 25px; border: 2px solid var(--border-color); background: transparent; color: var(--text-light); border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Web Projects</button>
+                <button class="tab-btn project-tab-btn" onclick="switchProjectTab('javascript')" style="padding: 10px 25px; border: 2px solid var(--border-color); background: transparent; color: var(--text-light); border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s;">JavaScript</button>
+            </div>
+
+            <!-- PYTHON PROJELERİ -->
+            <div id="group-python" class="project-group active" style="display: grid;">
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-noteks.svg" alt="Budget App" loading="lazy" style="background: #3776AB; object-fit: contain; padding: 30px;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Budget Application</div>
+                            <p class="project-desc">A budget app class that tracks income and expenses across different categories with deposit/withdraw methods and statement generation.</p>
+                            <a href="https://github.com/eslem-nur/fcc-python/blob/main/budget.py" target="_blank" rel="noopener noreferrer" class="btn-outline">View Code</a>
+                            <div class="repo-link">
+                                <i class="fab fa-python"></i>
+                                <span>Budget App | Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-noteks.svg" alt="Accounting Book" loading="lazy" style="background: #3776AB; object-fit: contain; padding: 30px;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Bookstore Inventory</div>
+                            <p class="project-desc">An inventory management system for a bookstore with item tracking, category organization, and sales reporting features.</p>
+                            <a href="https://github.com/eslem-nur/fcc-python/blob/main/bookstore.py" target="_blank" rel="noopener noreferrer" class="btn-outline">View Code</a>
+                            <div class="repo-link">
+                                <i class="fab fa-python"></i>
+                                <span>Bookstore | Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-noteks.svg" alt="Polygon Area Calculator" loading="lazy" style="background: #3776AB; object-fit: contain; padding: 30px;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Polygon Area Calculator</div>
+                            <p class="project-desc">Classes for calculating areas and perimeters of rectangles, squares, and circles with shape comparison methods.</p>
+                            <a href="https://github.com/eslem-nur/fcc-python/blob/main/shape_calculator.py" target="_blank" rel="noopener noreferrer" class="btn-outline">View Code</a>
+                            <div class="repo-link">
+                                <i class="fab fa-python"></i>
+                                <span>Geometry | Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-noteks.svg" alt="Probability Calculator" loading="lazy" style="background: #3776AB; object-fit: contain; padding: 30px;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Probability Calculator</div>
+                            <p class="project-desc">Monte Carlo simulation for probability experiments with hat classes and experiment runners.</p>
+                            <a href="https://github.com/eslem-nur/fcc-python/blob/main/probability.py" target="_blank" rel="noopener noreferrer" class="btn-outline">View Code</a>
+                            <div class="repo-link">
+                                <i class="fab fa-python"></i>
+                                <span>Statistics | Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- WEB PROJELERİ -->
+            <div id="group-web" class="project-group" style="display: none;">
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Html5.svg" alt="Personal Portfolio" loading="lazy" style="background: #E34F26; object-fit: contain; padding: 20px;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Personal Portfolio Page</div>
+                            <p class="project-desc">A responsive portfolio webpage showcasing skills, projects, and contact information with smooth scrolling and animations.</p>
+                            <a href="https://github.com/eslem-nur/fcc-rwd/tree/main/portfolio" target="_blank" rel="noopener noreferrer" class="btn-outline">Live Demo</a>
+                            <div class="repo-link">
+                                <i class="fab fa-html5"></i>
+                                <span>Portfolio | HTML5/CSS3</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Html5.svg" alt="Document Builder" loading="lazy" style="background: #E34F26; object-fit: contain; padding: 20px;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Technical Documentation Page</div>
+                            <p class="project-desc">A documentation website with sidebar navigation, code examples, and responsive layout for learning web technologies.</p>
+                            <a href="https://github.com/eslem-nur/fcc-rwd/tree/main/documentation" target="_blank" rel="noopener noreferrer" class="btn-outline">Live Demo</a>
+                            <div class="repo-link">
+                                <i class="fab fa-css3"></i>
+                                <span>Documentation | CSS Grid</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Html5.svg" alt="Survey Form" loading="lazy" style="background: #E34F26; object-fit: contain; padding: 20px;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Survey Form</div>
+                            <p class="project-desc">A fully accessible survey form with various input types, validation, and responsive design considerations.</p>
+                            <a href="https://github.com/eslem-nur/fcc-rwd/tree/main/survey" target="_blank" rel="noopener noreferrer" class="btn-outline">Live Demo</a>
+                            <div class="repo-link">
+                                <i class="fab fa-html5"></i>
+                                <span>Form Design | Accessibility</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Html5.svg" alt="Landing Page" loading="lazy" style="background: #E34F26; object-fit: contain; padding: 20px;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Product Landing Page</div>
+                            <p class="project-desc">A marketing landing page with video embedding, form integration, and conversion-focused design elements.</p>
+                            <a href="https://github.com/eslem-nur/fcc-rwd/tree/main/landing-page" target="_blank" rel="noopener noreferrer" class="btn-outline">Live Demo</a>
+                            <div class="repo-link">
+                                <i class="fab fa-html5"></i>
+                                <span>Landing Page | Marketing</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- JAVASCRIPT PROJELERİ -->
+            <div id="group-javascript" class="project-group" style="display: none;">
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Calculator" loading="lazy" style="background: #F7DF1E; object-fit: contain; padding: 20px;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">JavaScript Calculator</div>
+                            <p class="project-desc">A fully functional calculator app with keyboard support, error handling, and chain calculation capabilities.</p>
+                            <a href="https://github.com/eslem-nur/fcc-javascript/tree/main/calculator" target="_blank" rel="noopener noreferrer" class="btn-outline">Live Demo</a>
+                            <div class="repo-link">
+                                <i class="fab fa-js"></i>
+                                <span>Calculator | DOM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Pascal's Triangle" loading="lazy" style="background: #F7DF1E; object-fit: contain; padding: 20px;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Palindrome Checker</div>
+                            <p class="project-desc">String manipulation algorithms including palindrome detection, Roman numeral conversion, and caesar cipher encoding.</p>
+                            <a href="https://github.com/eslem-nur/fcc-javascript/tree/main/algorithms" target="_blank" rel="noopener noreferrer" class="btn-outline">View Code</a>
+                            <div class="repo-link">
+                                <i class="fab fa-js"></i>
+                                <span>Algorithms | String Ops</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Weather App" loading="lazy" style="background: #F7DF1E; object-fit: contain; padding: 20px;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Weather Forecast App</div>
+                            <p class="project-desc">Real-time weather application using API integration, geolocation, and dynamic DOM updates with loading states.</p>
+                            <a href="https://github.com/eslem-nur/fcc-javascript/tree/main/weather-app" target="_blank" rel="noopener noreferrer" class="btn-outline">Live Demo</a>
+                            <div class="repo-link">
+                                <i class="fas fa-cloud"></i>
+                                <span>Weather API | Async/Await</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Markdown Previewer" loading="lazy" style="background: #F7DF1E; object-fit: contain; padding: 20px;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Markdown Preview Editor</div>
+                            <p class="project-desc">A real-time markdown editor with live preview, syntax highlighting, and common markdown feature support.</p>
+                            <a href="https://github.com/eslem-nur/fcc-javascript/tree/main/markdown-editor" target="_blank" rel="noopener noreferrer" class="btn-outline">Live Demo</a>
+                            <div class="repo-link">
+                                <i class="fab fa-js"></i>
+                                <span>Editor | Regex Parsing</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTICS SECTION -->
+    <section class="section" style="background: var(--note-bg);">
+        <div class="container">
+            <h2 class="section-title">İstatistikler</h2>
+            <div class="skills-container" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                
+                <div class="skill-card" style="text-align: center;">
+                    <div class="skill-icon" style="font-size: 3rem; margin-bottom: 10px;">📝</div>
+                    <h3 style="font-family: 'Playfair Display', serif; color: var(--primary-color);">50+</h3>
+                    <p style="color: var(--text-light);">Coding Exercises Completed</p>
+                </div>
+                
+                <div class="skill-card" style="text-align: center;">
+                    <div class="skill-icon" style="font-size: 3rem; margin-bottom: 10px;">⭐</div>
+                    <h3 style="font-family: 'Playfair Display', serif; color: var(--primary-color);">10+</h3>
+                    <p style="color: var(--text-light);">Projects Built</p>
+                </div>
+                
+                <div class="skill-card" style="text-align: center;">
+                    <div class="skill-icon" style="font-size: 3rem; margin-bottom: 10px;">🎯</div>
+                    <h3 style="font-family: 'Playfair Display', serif; color: var(--primary-color);">3</h3>
+                    <p style="color: var(--text-light);">Certifications Earned</p>
+                </div>
+                
+                <div class="skill-card" style="text-align: center;">
+                    <div class="skill-icon" style="font-size: 3rem; margin-bottom: 10px;">⏱️</div>
+                    <h3 style="font-family: 'Playfair Display', serif; color: var(--primary-color);">300+</h3>
+                    <p style="color: var(--text-light);">Hours of Study</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (Ana siteyle aynı) -->
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="footer-arabic">رَبِّ زِدْنَا عِلْمًا</div>
+            <p style="margin-bottom: 30px;">Rabbim, ilmimizi arttır.</p>
+            
+            <div class="social-links">
+                <a href="http://linktr.ee/eslemnur" target="_blank" rel="noopener noreferrer" class="social-link" title="Linktree">
+                    <i class="fas fa-link"></i>
+                </a>
+                <a href="https://github.com/eslem-nur" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.freecodecamp.org/eslemnur" target="_blank" rel="noopener noreferrer" class="social-link" title="Free Code Camp">
+                    <i class="fas fa-code"></i>
+                </a>
+                <a href="https://ko-fi.com/eslemnur_notes" target="_blank" rel="noopener noreferrer" class="social-link" title="Ko-fi">
+                    <i class="fas fa-coffee"></i>
+                </a>
+                
+                <div style="display: inline-block; position: relative; cursor: pointer;" onclick="copyEmail()">
+                    <span class="social-link" style="background: none; border: 2px solid var(--primary-color); color: var(--primary-color); font-size: 1.2rem; width: 45px; height: 45px; display: inline-flex; align-items: center; justify-content: center;"><i class="fas fa-envelope"></i></span>
+                    <span style="margin-left: 10px; color: var(--primary-color); font-weight: 600; font-family: 'Lato', sans-serif;">eslemnur-official@proton.me</span>
+                    <div id="copyFeedback" style="position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%); background: var(--primary-color); color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; opacity: 0; transition: opacity 0.3s; pointer-events: none;">Kopyalandı!</div>
+                </div>
+            </div>
+
+            <p class="copyright">© <span id="current-year"></span> Eslem Nur Çetin. Tüm hakları saklıdır.</p>
+            <p class="legal-note" style="font-size: 0.75rem; color: var(--text-muted, #999); margin: 8px 0 0;">
+                Free Code Camp projeleri açık kaynaklıdır | GitHub'da görüntüle
+            </p>
+
+            <p style="margin: 15px 0 0;">
+                <a href="https://eslemnur.github.io/official/" class="btn-outline" style="font-size: 0.8rem; padding: 8px 20px;">
+                    <i class="fas fa-arrow-left"></i> Ana Siteye Dön
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript (Ana siteden aynı fonksiyonlar) -->
+    <script src="scripts.js"></script>
+    
+    <script>
+        // FCC sayfasına özel basit JS fonksiyonları (ana sitedeki zaten scripts.js'de)
+        
+        // Tab değiştirme fonksiyonları (zaten scripts.js'de varsa buradan kaldır)
+        if (typeof switchProjectTab === 'undefined') {
+            function switchProjectTab(tabName) {
+                const buttons = document.querySelectorAll('#projects .project-tab-btn');
+                const groups = document.querySelectorAll('#projects .project-group');
+                
+                buttons.forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-selected', 'false');
+                });
+                groups.forEach(group => group.style.display = 'none');
+
+                const targetGroup = document.getElementById('group-' + tabName);
+                if (targetGroup) {
+                    targetGroup.style.display = 'grid';
+                    localStorage.setItem('lastProjectTab', tabName);
+                }
+            }
+        }
+        
+        if (typeof switchSkillTab === 'undefined') {
+            function switchSkillTab(tabName) {
+                const buttons = document.querySelectorAll('#skills .skill-tab-btn');
+                const groups = document.querySelectorAll('#skills .skill-group');
+                
+                buttons.forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-selected', 'false');
+                });
+                groups.forEach(group => group.style.display = 'none');
+
+                const targetGroup = document.getElementById('group-' + tabName);
+                if (targetGroup) {
+                    targetGroup.style.display = 'grid';
+                }
+            }
+        }
+        
+        // Mobil menü toggle
+        if (typeof toggleMenu === 'undefined') {
+            function toggleMenu() {
+                const navLinks = document.querySelector('.nav-links');
+                if (navLinks) {
+                    navLinks.classList.toggle('active');
+                }
+            }
+        }
+        
+        // Dil menüsü toggle
+        if (typeof toggleLangMenu === 'undefined') {
+            function toggleLangMenu() {
+                const langDropdown = document.getElementById('langDropdown');
+                if (langDropdown) {
+                    langDropdown.classList.toggle('active');
+                }
+            }
+        }
+        
+        // Email kopyalama
+        if (typeof copyEmail === 'undefined') {
+            function copyEmail() {
+                const email = "eslemnur-official@proton.me";
+                navigator.clipboard.writeText(email).then(() => {
+                    const feedback = document.getElementById("copyFeedback");
+                    if (feedback) {
+                        feedback.style.opacity = "1";
+                        setTimeout(() => { feedback.style.opacity = "0"; }, 2000);
+                    }
+                }).catch(err => { 
+                    console.error("Kopyalama başarısız:", err); 
+                    alert("E-posta adresi: " + email); 
+                });
+            }
+        }
+        
+        // Yıl güncelleme
+        function updateYear() {
+            const yearSpan = document.getElementById("current-year");
+            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+        }
+        
+        // Tema yönetimi
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+        }
+        
+        function updateThemeIcon(theme) {
+            const icon = document.querySelector('#themeToggle i');
+            const btn = document.querySelector('#themeToggle');
+            if (icon && btn) {
+                if (theme === 'light') {
+                    icon.className = 'fas fa-moon';
+                } else {
+                    icon.className = 'fas fa-sun';
+                }
+            }
+        }
+        
+        function initThemeToggle() {
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    const currentTheme = document.documentElement.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                    document.documentElement.setAttribute('data-theme', newTheme);
+                    localStorage.setItem('theme', newTheme);
+                    updateThemeIcon(newTheme);
+                });
+            }
+        }
+        
+        // Sayfa yüklendiğinde
+        document.addEventListener('DOMContentLoaded', () => {
+            // Tab durumlarını yükle
+            const savedProjectTab = localStorage.getItem('lastProjectTab');
+            const projectBtns = document.querySelectorAll('#projects .project-tab-btn');
+            const projectGroups = document.querySelectorAll('#projects .project-group');
+
+            if (projectGroups.length > 0) {
+                projectGroups.forEach(g => g.style.display = 'none');
+                projectBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-selected', 'false');
+                });
+
+                if (savedProjectTab) {
+                    const btn = Array.from(projectBtns).find(b => b.getAttribute('onclick').includes(`'${savedProjectTab}'`));
+                    const grp = document.getElementById('group-' + savedProjectTab);
+                    if (btn && grp) {
+                        btn.classList.add('active');
+                        btn.setAttribute('aria-selected', 'true');
+                        grp.style.display = 'grid';
+                    }
+                } else {
+                    const defBtn = Array.from(projectBtns).find(b => b.getAttribute('onclick').includes("'python'"));
+                    const defGrp = document.getElementById('group-python');
+                    if (defBtn && defGrp) {
+                        defBtn.classList.add('active');
+                        defBtn.setAttribute('aria-selected', 'true');
+                        defGrp.style.display = 'grid';
+                    }
+                }
+            }
+            
+            // Skill tabs
+            const skillBtns = document.querySelectorAll('#skills .skill-tab-btn');
+            const skillGroups = document.querySelectorAll('#skills .skill-group');
+            
+            if (skillGroups.length > 0) {
+                skillGroups.forEach(g => g.style.display = 'none');
+                skillBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-selected', 'false');
+                });
+
+                const defBtn = Array.from(skillBtns).find(b => b.getAttribute('onclick').includes("'programming'"));
+                const defGrp = document.getElementById('group-programming');
+                if (defBtn && defGrp) {
+                    defBtn.classList.add('active');
+                    defBtn.setAttribute('aria-selected', 'true');
+                    defGrp.style.display = 'grid';
+                }
+            }
+            
+            initTheme();
+            initThemeToggle();
+            updateYear();
+        });
+    </script>
+</body>
+</html>
