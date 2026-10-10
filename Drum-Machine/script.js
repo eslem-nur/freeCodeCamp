@@ -47,7 +47,6 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// User Story 9: Keyboard-Event auf document
 document.addEventListener('keydown', function(event) {
     const key = event.key.toUpperCase();
     if (soundNames[key]) {
