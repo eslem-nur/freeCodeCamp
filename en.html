@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- SEO & Meta Tags -->
+    <title>Free Code Camp Projects | Eslem Nur Çetin</title>
+    <meta name="description" content="Free Code Camp certification projects and code examples. Eslem Nur Çetin's development journey.">
+    <meta name="keywords" content="Free Code Camp, Python, C#, JavaScript, Web Development, Programming, Eslem Nur Çetin">
+    <meta name="author" content="Eslem Nur Çetin">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Code Camp Projects | Eslem Nur Çetin">
+    <meta property="og:description" content="Free Code Camp certification projects and code examples.">
+    <meta property="og:image" content="https://i.pinimg.com/736x/98/a5/ca/98a5ca07841720013645e7a35330fa02.jpg">
+    <meta property="og:url" content="https://eslemnur.github.io/freeCodeCamp/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Font Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600&family=Inter:wght@300;400;600&display=swap" as="style">
+  
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="https://eslemnur.github.io/official/index.html" class="logo">
+                    <span>بسم الله</span> Eslem Nur Çetin
+                </a>
+               <div class="nav-controls">
+                    <!-- Language Toggle -->
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="theme-toggle" onclick="toggleLangMenu()" aria-label="Change Language">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                        </button>
+                        <div class="lang-dropdown-menu">
+                            <a href="index.html"> Türkçe</a>
+                            <a href="en.html">󠁧󠁢󠁥󠁮󠁧󠁿 English</a>
+                            <a href="de.html"> Deutsch</a>
+                            <a href="fr.html"> Français</a>
+                            <a href="ar.html"> العربية</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="themeToggle" class="theme-toggle" aria-label="Change Theme"><i class="fas fa-moon" aria-hidden="true"></i></button>
+                    
+                    <!-- Hamburger Menu -->
+                    <button class="hamburger" onclick="toggleMenu()" aria-label="Open Menu">☰</button>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="https://eslemnur.github.io/official/en.html#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="https://eslemnur.github.io/official/en.html#shop">Shop</a>
+                    <a href="https://eslemnur.github.io/official/en.html#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Free Code Camp <br><span class="gradient-text">Projects</span></h1>
+            <p class="hero-subtitle">Projects and code samples I completed during my Free Code Camp certification journey.</p>
+            <div class="hero-badges">
+                <span class="badge">Python</span>
+                <span class="badge">C#</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">HTML/CSS</span>
+                <span class="badge">Algorithms</span>
+            </div>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">Go to Projects</a>
+                <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer" class="btn-primary">Visit FCC</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS (FCC focused) -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">What I Learned</h2>
+            
+            <div class="tab-controls">
+                <button class="tab-btn skill-tab-btn active" tabindex="0" onclick="switchSkillTab('programming')" aria-selected="true">Programming Languages</button>
+                <button class="tab-btn skill-tab-btn" tabindex="0" onclick="switchSkillTab('certifications')" aria-selected="false">Certificates</button>
+            </div>
+
+            <!-- Programming Languages Content -->
+            <div id="group-programming" class="skill-group active">
+                <div class="skills-container">
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon language-icon python-bg">Py</div>
+                            <div class="skill-title">Python</div>
+                        </div>
+                        <ul class="skill-list">
+                            <li>Data Structures & Algorithms</li>
+                            <li>Object-Oriented Programming</li>
+                            <li>File I/O & Regular Expressions</li>
+                            <li>Scientific Computing with NumPy/Pandas</li>
+                            <li>Data Visualization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon language-icon csharp-bg">C#</div>
+                            <div class="skill-title">C# .NET</div>
+                        </div>
+                        <ul class="skill-list">
+                            <li>.NET Core Fundamentals</li>
+                            <li>Entity Framework</li>
+                            <li>ASP.NET Basics</li>
+                            <li>Debugging & Testing</li>
+                            <li>Console Applications</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon language-icon javascript-bg">JS</div>
+                            <div class="skill-title">JavaScript</div>
+                        </div>
+                        <ul class="skill-list">
+                            <li>ES6+ Modern Syntax</li>
+                            <li>DOM Manipulation</li>
+                            <li>Asynchronous Programming</li>
+                            <li>API Integration</li>
+                            <li>Functional Programming</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon language-icon html-bg">&lt;/&gt;</div>
+                            <div class="skill-title">Web Technologies</div>
+                        </div>
+                        <ul class="skill-list">
+                            <li>HTML5 Semantic Markup</li>
+                            <li>CSS3 & Flexbox/Grid</li>
+                            <li>Responsive Design</li>
+                            <li>Accessibility (ARIA)</li>
+                            <li>Version Control (Git)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificates Content -->
+            <div id="group-certifications" class="skill-group hidden">
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://imgs.search.brave.com/H41DUKTjQ2jfrzvhqRnycaaGDYymBdBylOWOtLaDEbY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bG9nby53aW5lL2Ev/bG9nby9QeXRob25f/KHByb2dyYW1taW5nX2xhbmd1YWdlKS9Q/eXRob25fKHByb2dy/YW1taW5nX2xhbmd1/YWdlKS1Mb2dvLndp/bmUuc3Zn" alt="Python Programming Certificate" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Python Certificate</div>
+                            <p class="project-desc">Python programming fundamentals, data structures, and web scraping certified through Free Code Camp curriculum.</p>
+                            <a href="https://drive.proton.me/urls/43SXAYP9SM#pdByWAIoVSRZ" target="_blank" rel="noopener noreferrer" class="btn-outline">View Certificate</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://imgs.search.brave.com/ipyoQx_XRRi3gxyK3TC3uMryY9JcsK5rZKDFy0-WXbI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzNmLzdh/LzI0LzNmN2EyNDAx/NDI5OGIzZWJmYWE4/OTU5NmEwZWNkMzgy/LmpwZw" alt="Responsive Web Design Certificate" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Responsive Web Design Certificate</div>
+                            <p class="project-desc">HTML5, CSS3, Flexbox, and CSS Grid projects demonstrating responsive design principles.</p>
+                            <a href="https://drive.proton.me/urls/AF99YNGJS0#uXD7q961ZDWv" target="_blank" rel="noopener noreferrer" class="btn-outline">View Certificate</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://imgs.search.brave.com/Uq1hUDc8_B_J8RFHSIof1A9zZYOJyoJiD6J4MYQTaVo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/cy13b3JsZC5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjMv/MDIvSmF2YVNjcmlw/dC1Mb2dvLTUwMHgy/ODEucG5n" alt="Canva Certificates" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">JavaScript Algorithms & Data Structures</div>
+                            <p class="project-desc">Algorithm challenges, data structure implementations, and JavaScript proficiency certification.</p>
+                            <a href="https://drive.proton.me/urls/7XD1Z5CTHC#wW5bACKNO2bn" target="_blank" rel="noopener noreferrer" class="btn-outline">View Certificate</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://imgs.search.brave.com/XdOj0jNCyxw6SLQZ0leaxN0W-TxPF-R7AYc05CjuCGw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vbWpIRno2/ZkpOZThNVnJEU3M5/N1k2bFhRdEhBemFs/d29nTFJiUkZqLVNl/MC9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTlz/YjJkdi9kSGx3TG5W/ekwyWnBiR1V2L1l5/MXphR0Z5Y0M1emRt/Yw" alt="C# Certificate" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">C# Certificate</div>
+                            <p class="project-desc">A 35-hour practical training developed in collaboration with Microsoft, and an exam-verified competence certificate covering the basic syntax of the C# programming language, data structures, control flow mechanisms, and debugging processes.</p>
+                            <a href="https://drive.proton.me/urls/N4SDZPR7Y4#neLvaileRg2a" target="_blank" rel="noopener noreferrer" class="btn-outline">View Certificate</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://i.pinimg.com/736x/69/6c/c3/696cc346b4793cdf138edff209f97196.jpg" alt="Canva Design" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Design & UI/UX Fundamentals</div>
+                            <p class="project-desc">Certificates demonstrating expertise in color theory, typography, and layout principles according to Canva Design School curriculum, proving competence in developing modern visual communication solutions through creating logos, social media content, infographics, and professional presentations.</p>
+                            <a href="https://drive.proton.me/urls/RXP92H17R0#6uhkNEGDMhJC" target="_blank" rel="noopener noreferrer" class="btn-outline">View Certificate</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-description">
+                My Free Code Camp certification projects and exercises.
+            </p>
+
+            <div class="tab-controls">
+                <button class="tab-btn project-tab-btn active" tabindex="0" onclick="switchProjectTab('python')" aria-selected="true">Python</button>
+                <button class="tab-btn project-tab-btn" tabindex="0" onclick="switchProjectTab('web')" aria-selected="false">Web Projects</button>
+                <button class="tab-btn project-tab-btn" tabindex="0" onclick="switchProjectTab('javascript')" aria-selected="false">JavaScript</button>
+            </div>
+
+            <!-- PYTHON PROJECTS -->
+            <div id="group-python" class="project-group active">
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-noteks.svg" alt="Budget App" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Budget Application</div>
+                            <p class="project-desc">A budget app class that tracks income and expenses across different categories with deposit/withdraw methods and statement generation.</p>
+                            <a href="../freeCodeCamp/Python/budget-app.py" target="_blank" rel="noopener noreferrer" class="btn-outline">View Code</a>
+                            <div class="repo-link">
+                                <i class="fab fa-python"></i>
+                                <span>Budget App | Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-noteks.svg" alt="Tower-Hanoi-Algorithm" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Tower of Hanoi Algorithm</div>
+                            <p class="project-desc">An inventory management system for a bookstore with item tracking, category organization, and sales reporting features.</p>
+                            <a href="../freeCodeCamp/Python/Tower-Hanoi-Algorithm.py" target="_blank" rel="noopener noreferrer" class="btn-outline">View Code</a>
+                            <div class="repo-link">
+                                <i class="fab fa-python"></i>
+                                <span>Algorithm | Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-noteks.svg" alt="Polygon Area Calculator" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Polygon Area Calculator</div>
+                            <p class="project-desc">Classes for calculating areas and perimeters of rectangles, squares, and circles with shape comparison methods.</p>
+                            <a href="../freeCodeCamp/Python/Polygon-Area-Calculator.py" target="_blank" rel="noopener noreferrer" class="btn-outline">View Code</a>
+                            <div class="repo-link">
+                                <i class="fab fa-python"></i>
+                                <span>Geometry | Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-noteks.svg" alt="Hash Table" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Hash Table</div>
+                            <p class="project-desc">Monte Carlo simulation for probability experiments with hat classes and experiment runners.</p>
+                            <a href="../freeCodeCamp/Python/hash-table.py" target="_blank" rel="noopener noreferrer" class="btn-outline">View Code</a>
+                            <div class="repo-link">
+                                <i class="fab fa-python"></i>
+                                <span>Hash Table | Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- WEB PROJECTS -->
+            <div id="group-web" class="project-group hidden">
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Html5.svg" alt="Personal Portfolio" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Personal Portfolio Page</div>
+                            <p class="project-desc">A responsive portfolio webpage showcasing skills, projects, and contact information with smooth scrolling and animations.</p>
+                            <a href="https://eslem-nur.github.io/official/en.html" target="_blank" rel="noopener noreferrer" class="btn-outline">Live Demo</a>
+                            <div class="repo-link">
+                                <i class="fab fa-html5"></i>
+                                <span>Portfolio | HTML5/CSS3</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Html5.svg" alt="Document Builder" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Technical Documentation Page</div>
+                            <p class="project-desc">A documentation website with sidebar navigation, code examples, and responsive layout for learning web technologies.</p>
+                            <a href="../freeCodeCamp/Technical-Documentation-Page/Technical-Documentation-Page.html" target="_blank" rel="noopener noreferrer" class="btn-outline">Live Demo</a>
+                            <div class="repo-link">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>Documentation | CSS Grid</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Html5.svg" alt="Survey Form" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Survey Form</div>
+                            <p class="project-desc">A fully accessible survey form with various input types, validation, and responsive design considerations.</p>
+                            <a href="../freeCodeCamp/HTML/Survey-Form.html" target="_blank" rel="noopener noreferrer" class="btn-outline">Live Demo</a>
+                            <div class="repo-link">
+                                <i class="fab fa-html5"></i>
+                                <span>Form Design | Accessibility</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Html5.svg" alt="Landing Page" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Product Landing Page</div>
+                            <p class="project-desc">A marketing landing page with video embedding, form integration, and conversion-focused design elements.</p>
+                            <a href="../freeCodeCamp/Product-Landing-Page/Product-Landing-Page.html" target="_blank" rel="noopener noreferrer" class="btn-outline">Live Demo</a>
+                            <div class="repo-link">
+                                <i class="fab fa-html5"></i>
+                                <span>Landing Page | Marketing</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-noteks.svg" alt="Bookstore Inventory App" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Bookstore Inventory App</div>
+                            <p class="project-desc">An inventory management system for a bookstore with item tracking, category organization, and sales reporting features.</p>
+                            <a href="../freeCodeCamp/Bookstore-Inventory-App/Bookstore-Inventory-App.html" target="_blank" rel="noopener noreferrer" class="btn-outline">View Code</a>
+                            <div class="repo-link">
+                                <i class="fab fa-html5"></i>
+                                <span>Bookstore | HTML5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-noteks.svg" alt="Photography Exhibit" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Photography Exhibit</div>
+                            <p class="project-desc">A photography exhibit page featuring image galleries, artist profiles, and exhibition schedules.</p>
+                            <a href="../freeCodeCamp/HTML/Photography-Exhibit.html" target="_blank" rel="noopener noreferrer" class="btn-outline">View Code</a>
+                            <div class="repo-link">
+                                <i class="fab fa-html5"></i>
+                                <span>Exhibit | HTML5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-noteks.svg" alt="Playing Cards" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Playing Cards</div>
+                            <p class="project-desc">A card display page with animated card flipping, suit and rank icons, and interactive deck management.</p>
+                            <a href="../freeCodeCamp/Playing-Cards-Page/Page-Playing-Cards.html" target="_blank" rel="noopener noreferrer" class="btn-outline">View Code</a>
+                            <div class="repo-link">
+                                <i class="fab fa-html5"></i>
+                                <span>Cards Page | HTML5</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- JAVASCRIPT PROJECTS -->
+            <div id="group-javascript" class="project-group hidden">
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Voting System" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Voting System</div>
+                            <p class="project-desc">A fully functional voting system with candidate management, vote counting, and result visualization.</p>
+                            <a href="../freeCodeCamp/JavaScript/Voting-System.js" target="_blank" rel="noopener noreferrer" class="btn-outline">Live Demo</a>
+                            <div class="repo-link">
+                                <i class="fab fa-js"></i>
+                                <span>Voting | JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Bank Account Management" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Bank Account Management Program</div>
+                            <p class="project-desc">String manipulation algorithms including palindrome detection, Roman numeral conversion, and caesar cipher encoding.</p>
+                            <a href="../freeCodeCamp/JavaScript/Bank-Account-Management-Program.js" target="_blank" rel="noopener noreferrer" class="btn-outline">View Code</a>
+                            <div class="repo-link">
+                                <i class="fab fa-js"></i>
+                                <span>Management | JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Weather App" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Weather Forecast App</div>
+                            <p class="project-desc">Real-time weather application using API integration, geolocation, and dynamic DOM updates with loading states.</p>
+                            <a href="../freeCodeCamp/Weather-App/Weather-App.html" target="_blank" rel="noopener noreferrer" class="btn-outline">Live Demo</a>
+                            <div class="repo-link">
+                                <i class="fas fa-cloud"></i>
+                                <span>Weather API | Async/Await</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Markdown Converter" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Markdown to HTML Converter</div>
+                            <p class="project-desc">A real-time markdown editor with live preview, syntax highlighting, and common markdown feature support.</p>
+                            <a href="../freeCodeCamp/Markdown-HTML-Converter/Markdown-HTML-Converter.html" target="_blank" rel="noopener noreferrer" class="btn-outline">Live Demo</a>
+                            <div class="repo-link">
+                                <i class="fab fa-js"></i>
+                                <span>Converter | JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Drum Machine" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Drum Machine</div>
+                            <p class="project-desc">An interactive drum machine with sound synthesis, beat sequencing, and audio playback capabilities.</p>
+                            <a href="../freeCodeCamp/Drum-Machine/Drum-Machine.html" target="_blank" rel="noopener noreferrer" class="btn-outline">Live Demo</a>
+                            <div class="repo-link">
+                                <i class="fab fa-js"></i>
+                                <span>Machine | JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Currency Converter" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Currency Converter</div>
+                            <p class="project-desc">Real-time currency conversion application using API integration with multiple currencies and exchange rates.</p>
+                            <a href="../freeCodeCamp/Currency-Converter/Currency-Converter.html" target="_blank" rel="noopener noreferrer" class="btn-outline">Live Demo</a>
+                            <div class="repo-link">
+                                <i class="fab fa-js"></i>
+                                <span>API Integration | JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Tic-Tac-Toe" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">Tic-Tac-Toe Game</div>
+                            <p class="project-desc">Interactive tic-tac-toe game with two-player mode, win detection, score tracking, and responsive UI.</p>
+                            <a href="../freeCodeCamp/Tic-Tac-Toe-Game/Tic-Tac-Toe.html" target="_blank" rel="noopener noreferrer" class="btn-outline">Live Demo</a>
+                            <div class="repo-link">
+                                <i class="fab fa-js"></i>
+                                <span>Game | JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTICS SECTION -->
+    <section class="section statistics-section">
+        <div class="container">
+            <h2 class="section-title">Statistics</h2>
+            <div class="skills-container">
+                
+                <div class="skill-card stat-card">
+                    <div class="skill-icon">📝</div>
+                    <h3 class="stat-number">50+</h3>
+                    <p class="stat-label">Coding Exercises Completed</p>
+                </div>
+                
+                <div class="skill-card stat-card">
+                    <div class="skill-icon">⭐</div>
+                    <h3 class="stat-number">10+</h3>
+                    <p class="stat-label">Projects Built</p>
+                </div>
+                
+                <div class="skill-card stat-card">
+                    <div class="skill-icon">🎯</div>
+                    <h3 class="stat-number">3</h3>
+                    <p class="stat-label">Certifications Earned</p>
+                </div>
+                
+                <div class="skill-card stat-card">
+                    <div class="skill-icon">⏱️</div>
+                    <h3 class="stat-number">300+</h3>
+                    <p class="stat-label">Hours of Study</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="footer-arabic">رَبِّ زِدْنَا عِلْمًا</div>
+            <p class="footer-quote">Rabbim, ilmimizi arttır.</p>
+            
+            <div class="social-links">
+                <a href="http://linktr.ee/eslemnur" target="_blank" rel="noopener noreferrer" class="social-link" title="Linktree" aria-label="Linktree Profile">
+                    <i class="fas fa-link"></i>
+                </a>
+                <a href=".." target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.freecodecamp.org/eslemnur" target="_blank" rel="noopener noreferrer" class="social-link" title="Free Code Camp" aria-label="Free Code Camp Profile">
+                    <i class="fas fa-code"></i>
+                </a>
+                <a href="https://ko-fi.com/eslemnur_notes" target="_blank" rel="noopener noreferrer" class="social-link" title="Ko-fi" aria-label="Support Me on Ko-fi">
+                    <i class="fas fa-coffee"></i>
+                </a>
+                
+                <!-- EMAIL COPY -->
+                <div class="email-copy-wrapper" onclick="copyEmail()" role="button" tabindex="0" aria-label="Copy email address" title="Click to copy email address">
+                    <span class="social-link email-button">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span class="email-address">eslemnur-official@proton.me</span>
+                    <span class="copy-feedback" id="copyFeedback">Copied!</span>
+                </div>
+            </div>
+
+            <p class="copyright">© <span id="current-year"></span> Eslem Nur Çetin. All rights reserved.</p>
+            <p class="legal-note">
+                Free Code Camp projects are open source | View on GitHub
+            </p>
+
+            <p class="back-to-home">
+                <a href="https://eslemnur.github.io/official/en.html" class="btn-outline">
+                    <i class="fas fa-arrow-left"></i> Return to Home
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    
+    <script src="scripts.js"></script>
+        
+
+        
+</body>
+</html>

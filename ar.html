@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>مشاريع Free Code Camp | أسلم نورتشيتين</title>
+    <meta name="description" content="مشاريع شهادات Free Code Camp وأمثلة على الكود. رحلة تطوير أسلم نورتشيتين.">
+    <meta name="keywords" content="Free Code Camp, Python, C#, JavaScript, تطوير الويب, برمجة, أسلم نورتشيتين">
+    <meta name="author" content="أسلم نورتشيتين">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="مشاريع Free Code Camp | أسلم نورتشيتين">
+    <meta property="og:description" content="مشاريع شهادات Free Code Camp وأمثلة على الكود.">
+    <meta property="og:image" content="https://i.pinimg.com/736x/98/a5/ca/98a5ca07841720013645e7a35330fa02.jpg">
+    <meta property="og:url" content="https://eslemnur.github.io/freeCodeCamp/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_SA">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="https://eslemnur.github.io/official/ar.html" class="logo">
+                    <span>بسم الله</span> أسلم نورتشيتين
+                </a>
+               <div class="nav-controls">
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="theme-toggle" onclick="toggleLangMenu()" aria-label="تغيير اللغة">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                        </button>
+                        <div class="lang-dropdown-menu">
+                            <a href="index.html"> Türkçe</a>
+                            <a href="en.html">󠁧󠁢󠁥󠁮󠁧󠁿 English</a>
+                            <a href="de.html"> Deutsch</a>
+                            <a href="fr.html"> Français</a>
+                            <a href="ar.html"> العربية</a>
+                        </div>
+                    </div>
+                    
+                    <button id="themeToggle" class="theme-toggle" aria-label="تغيير الموضوع"><i class="fas fa-moon" aria-hidden="true"></i></button>
+                    
+                    <button class="hamburger" onclick="toggleMenu()" aria-label="فتح القائمة">☰</button>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="https://eslemnur.github.io/official/ar.html#about">عني</a>
+                    <a href="#projects">المشاريع</a>
+                    <a href="https://eslemnur.github.io/official/ar.html#shop">المتجر</a>
+                    <a href="https://eslemnur.github.io/official/ar.html#contact">اتصل بي</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Free Code Camp <br><span class="gradient-text">المشاريع</span></h1>
+            <p class="hero-subtitle">المشاريع ونماذج الكود التي أكملتها أثناء رحلة شهادة Free Code Camp.</p>
+            <div class="hero-badges">
+                <span class="badge">بايثون</span>
+                <span class="badge">C#</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">HTML/CSS</span>
+                <span class="badge">الخوارزميات</span>
+            </div>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">الذهاب إلى المشاريع</a>
+                <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer" class="btn-primary">زيارة FCC</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">ما تعلمته</h2>
+            
+            <div class="tab-controls">
+                <button class="tab-btn skill-tab-btn active" tabindex="0" onclick="switchSkillTab('programming')" aria-selected="true">لغات البرمجة</button>
+                <button class="tab-btn skill-tab-btn" tabindex="0" onclick="switchSkillTab('certifications')" aria-selected="false">الشهادات</button>
+            </div>
+
+            <div id="group-programming" class="skill-group active">
+                <div class="skills-container">
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon language-icon python-bg">Py</div>
+                            <div class="skill-title">بايثون</div>
+                        </div>
+                        <ul class="skill-list">
+                            <li>هياكل البيانات والخوارزميات</li>
+                            <li>برمجة كائنية التوجه</li>
+                            <li>إدخال/إخراج الملفات والتعبيرات النمطية</li>
+                            <li>الحوسبة العلمية مع NumPy/Pandas</li>
+                            <li>تصور البيانات</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon language-icon csharp-bg">C#</div>
+                            <div class="skill-title">C# .NET</div>
+                        </div>
+                        <ul class="skill-list">
+                            <li>أساسيات .NET Core</li>
+                            <li>Entity Framework</li>
+                            <li>أساسيات ASP.NET</li>
+                            <li>التصحيح والاختبار</li>
+                            <li>تطبيقات وحدة التحكم</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon language-icon javascript-bg">JS</div>
+                            <div class="skill-title">JavaScript</div>
+                        </div>
+                        <ul class="skill-list">
+                            <li>البناء النحوي الحديث ES6+</li>
+                            <li>التلاعب بـ DOM</li>
+                            <li>البرمجة غير المتزامنة</li>
+                            <li>تكامل API</li>
+                            <li>البرمجة الوظيفية</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon language-icon html-bg">&lt;/&gt;</div>
+                            <div class="skill-title">تقنيات الويب</div>
+                        </div>
+                        <ul class="skill-list">
+                            <li>وضع العلامة الدلالي HTML5</li>
+                            <li>CSS3 و Flexbox/Grid</li>
+                            <li>التصميم المتجاوب</li>
+                            <li>إمكانية الوصول (ARIA)</li>
+                            <li>التحكم بالإصدار (Git)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="group-certifications" class="skill-group hidden">
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://imgs.search.brave.com/H41DUKTjQ2jfrzvhqRnycaaGDYymBdBylOWOtLaDEbY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bG9nby53aW5lL2Ev/bG9nby9QeXRob25f/KHByb2dyYW1taW5nX2xhbmd1YWdlKS9Q/eXRob25fKHByb2dy/YW1taW5nX2xhbmd1/YWdlKS1Mb2dvLndp/bmUuc3Zn" alt="شهادة برمجة بايثون" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">شهادة بايثون</div>
+                            <p class="project-desc">أساسيات برمجة بايثون وهياكل البيانات وشبكات الويب المعتمدة من خلال منهج Free Code Camp.</p>
+                            <a href="https://drive.proton.me/urls/43SXAYP9SM#pdByWAIoVSRZ" target="_blank" rel="noopener noreferrer" class="btn-outline">عرض الشهادة</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://imgs.search.brave.com/ipyoQx_XRRi3gxyK3TC3uMryY9JcsK5rZKDFy0-WXbI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzNmLzdh/LzI0LzNmN2EyNDAx/NDI5OGIzZWJmYWE4/OTU5NmEwZWNkMzgy/LmpwZw" alt="شهادة تصميم الويب المتجاوب" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">شهادة تصميم الويب المتجاوب</div>
+                            <p class="project-desc">مشاريع HTML5 و CSS3 و Flexbox و CSS Grid توضح مبادئ التصميم المتجاوب.</p>
+                            <a href="https://drive.proton.me/urls/AF99YNGJS0#uXD7q961ZDWv" target="_blank" rel="noopener noreferrer" class="btn-outline">عرض الشهادة</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://imgs.search.brave.com/Uq1hUDc8_B_J8RFHSIof1A9zZYOJyoJiD6J4MYQTaVo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/cy13b3JsZC5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjMv/MDIvSmF2YVNjcmlw/dC1Mb2dvLTUwMHgy/ODEucG5n" alt="شهادات Canva" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">خوارزميات JavaScript وهياكل البيانات</div>
+                            <p class="project-desc">تحديات الخوارزميات وتنفيذ هياكل البيانات وشهادة الكفاءة في JavaScript.</p>
+                            <a href="https://drive.proton.me/urls/7XD1Z5CTHC#wW5bACKNO2bn" target="_blank" rel="noopener noreferrer" class="btn-outline">عرض الشهادة</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://imgs.search.brave.com/XdOj0jNCyxw6SLQZ0leaxN0W-TxPF-R7AYc05CjuCGw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vbWpIRno2/ZkpOZThNVnJEU3M5/N1k2bFhRdEhBemFs/d29nTFJiUkZqLVNl/MC9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTlz/YjJkdi9kSGx3TG5W/ekwyWnBiR1V2L1l5/MXphR0Z5Y0M1emRt/Yw" alt="شهادة C#" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">شهادة C#</div>
+                            <p class="project-desc">تدريب عملي لمدة 35 ساعة تم تطويره بالتعاون مع Microsoft، وشهادة كفاءة مدققة بالامتحان تغطي بناء الجملة الأساسي لغة البرمجة C#. وهيكل البيانات وآليات تدفق التحكم وعمليات التصحيح.</p>
+                            <a href="https://drive.proton.me/urls/N4SDZPR7Y4#neLvaileRg2a" target="_blank" rel="noopener noreferrer" class="btn-outline">عرض الشهادة</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://i.pinimg.com/736x/69/6c/c3/696cc346b4793cdf138edff209f97196.jpg" alt="تصميم Canva" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">أساسيات التصميم و UI/UX</div>
+                            <p class="project-desc">شهادات تثبت الخبرة في نظرية الألوان والطباعة ومبادئ التخطيط وفقًا لمنهج مدرسة Canva للتصميم.</p>
+                            <a href="https://drive.proton.me/urls/RXP92H17R0#6uhkNEGDMhJC" target="_blank" rel="noopener noreferrer" class="btn-outline">عرض الشهادة</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">مشاريعي</h2>
+            <p class="section-description">مشاريع واختبارات شهادة Free Code Camp الخاصة بي.</p>
+
+            <div class="tab-controls">
+                <button class="tab-btn project-tab-btn active" tabindex="0" onclick="switchProjectTab('python')" aria-selected="true">بايثون</button>
+                <button class="tab-btn project-tab-btn" tabindex="0" onclick="switchProjectTab('web')" aria-selected="false">مشاريع الويب</button>
+                <button class="tab-btn project-tab-btn" tabindex="0" onclick="switchProjectTab('javascript')" aria-selected="false">JavaScript</button>
+            </div>
+
+            <div id="group-python" class="project-group active">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-noteks.svg" alt="تطبيق الميزانية" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">تطبيق الميزانية</div>
+                            <p class="project-desc">فئة تطبيق الميزانية التي تتابع الدخل والمصروفات عبر فئات مختلفة مع طرق الإيداع والسحب وتوليد البيانات المالية.</p>
+                            <a href="../freeCodeCamp/Python/budget-app.py" target="_blank" rel="noopener noreferrer" class="btn-outline">عرض الكود</a>
+                            <div class="repo-link">
+                                <i class="fab fa-python"></i>
+                                <span>تطبيق الميزانية | بايثون</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-noteks.svg" alt="خوارزمية برج هانوي" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">خوارزمية برج هانوي</div>
+                            <p class="project-desc">نظام إدارة المخزون لكتب متجر مع تتبع العناصر وتنظيم الفئات وميزات تقارير المبيعات.</p>
+                            <a href="../freeCodeCamp/Python/Tower-Hanoi-Algorithm.py" target="_blank" rel="noopener noreferrer" class="btn-outline">عرض الكود</a>
+                            <div class="repo-link">
+                                <i class="fab fa-python"></i>
+                                <span>الخوارزمية | بايثون</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-noteks.svg" alt="حاسبة مساحة المضلع" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">حاسبة مساحة المضلع</div>
+                            <p class="project-desc">فئات لحساب مساحات ومحيط المستطيلات والمربعات والدوائر مع طرق مقارنة الشكل.</p>
+                            <a href="../freeCodeCamp/Python/Polygon-Area-Calculator.py" target="_blank" rel="noopener noreferrer" class="btn-outline">عرض الكود</a>
+                            <div class="repo-link">
+                                <i class="fab fa-python"></i>
+                                <span>الهندسة | بايثون</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-noteks.svg" alt="جدول التجزئة" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">جدول التجزئة</div>
+                            <p class="project-desc">محاكاة مونت كارلو لتجارب الاحتمالات مع فئات القبعة ومشغلي التجارب.</p>
+                            <a href="../freeCodeCamp/Python/hash-table.py" target="_blank" rel="noopener noreferrer" class="btn-outline">عرض الكود</a>
+                            <div class="repo-link">
+                                <i class="fab fa-python"></i>
+                                <span>جدول التجزئة | بايثون</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="group-web" class="project-group hidden">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Html5.svg" alt="محفظة شخصية" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">صفحة المحفظة الشخصية</div>
+                            <p class="project-desc">صفحة ويب محفظة متجاوبة تعرض المهارات والمشاريع ومعلومات الاتصال مع التمرير السلس والحركات.</p>
+                            <a href="https://eslemnur.github.io/official/ar.html" target="_blank" rel="noopener noreferrer" class="btn-outline">تجربة حية</a>
+                            <div class="repo-link">
+                                <i class="fab fa-html5"></i>
+                                <span>المحفظة | HTML5/CSS3</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Html5.svg" alt="صفحة التوثيق الفني" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">صفحة التوثيق الفني</div>
+                            <p class="project-desc">موقع توثيق مع تنقل الشريط الجانبي ونماذج الكود وتنسيق متجاوب لتعلم تقنيات الويب.</p>
+                            <a href="../freeCodeCamp/Technical-Documentation-Page/Technical-Documentation-Page.html" target="_blank" rel="noopener noreferrer" class="btn-outline">تجربة حية</a>
+                            <div class="repo-link">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>التوثيق | CSS Grid</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Html5.svg" alt="استبيان الاستطلاع" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">استبيان الاستطلاع</div>
+                            <p class="project-desc">استبيان استطلاعي كامل الصلاحيات بأنواع إدخال مختلفة والتحقق واعتبارات التصميم المتجاوب.</p>
+                            <a href="../freeCodeCamp/HTML/Survey-Form.html" target="_blank" rel="noopener noreferrer" class="btn-outline">تجربة حية</a>
+                            <div class="repo-link">
+                                <i class="fab fa-html5"></i>
+                                <span>تصميم النموذج | إمكانية الوصول</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Html5.svg" alt="صفحة الهبوط" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">صفحة هبوط المنتج</div>
+                            <p class="project-desc">صفحة هبوط تسويقية مع تضمين الفيديو وتكامل النموذج وعناصر التصميم المركزة على التحويل.</p>
+                            <a href="../freeCodeCamp/Product-Landing-Page/Product-Landing-Page.html" target="_blank" rel="noopener noreferrer" class="btn-outline">تجربة حية</a>
+                            <div class="repo-link">
+                                <i class="fab fa-html5"></i>
+                                <span>صفحة الهبوط | التسويق</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-noteks.svg" alt="تطبيق مخزون المكتبة" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">تطبيق مخزون المكتبة</div>
+                            <p class="project-desc">نظام إدارة المخزون لمتجر كتب مع تتبع العناصر وتنظيم الفئات وميزات تقارير المبيعات.</p>
+                            <a href="../freeCodeCamp/Bookstore-Inventory-App/Bookstore-Inventory-App.html" target="_blank" rel="noopener noreferrer" class="btn-outline">عرض الكود</a>
+                            <div class="repo-link">
+                                <i class="fab fa-html5"></i>
+                                <span>المكتبة | HTML5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-noteks.svg" alt="معرض التصوير الفوتوغرافي" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">معرض التصوير الفوتوغرافي</div>
+                            <p class="project-desc">صفحة معرض الصور مع صورك الفنية وملفات الفنانين والجداول الزمنية للمعارض.</p>
+                            <a href="../freeCodeCamp/HTML/Photography-Exhibit.html" target="_blank" rel="noopener noreferrer" class="btn-outline">عرض الكود</a>
+                            <div class="repo-link">
+                                <i class="fab fa-html5"></i>
+                                <span>المعرض | HTML5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-noteks.svg" alt="البطاقات اللعب" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">البطاقات اللعب</div>
+                            <p class="project-desc">صفحة عرض البطاقات مع قلب البطاقات المتحركة وأيقونات اللون والرتبة وإدارة المجموعة التفاعلية.</p>
+                            <a href="../freeCodeCamp/Playing-Cards-Page/Page-Playing-Cards.html" target="_blank" rel="noopener noreferrer" class="btn-outline">عرض الكود</a>
+                            <div class="repo-link">
+                                <i class="fab fa-html5"></i>
+                                <span>صفحة البطاقات | HTML5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="group-javascript" class="project-group hidden">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="نظام التصويت" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">نظام التصويت</div>
+                            <p class="project-desc">نظام تصويت كامل الوظائف مع إدارة المرشحين وعد الأصوات وتصور النتائج.</p>
+                            <a href="../freeCodeCamp/JavaScript/Voting-System.js" target="_blank" rel="noopener noreferrer" class="btn-outline">تجربة حية</a>
+                            <div class="repo-link">
+                                <i class="fab fa-js"></i>
+                                <span>التصويت | JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="برنامج إدارة الحساب المصرفي" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">برنامج إدارة الحسابات البنكية</div>
+                            <p class="project-desc">خوارزميات معالجة السلاسل النصية بما في ذلك كشف التناظر والترجمة للأرقام الرومانية وترميز تشفير قيصر.</p>
+                            <a href="../freeCodeCamp/JavaScript/Bank-Account-Management-Program.js" target="_blank" rel="noopener noreferrer" class="btn-outline">عرض الكود</a>
+                            <div class="repo-link">
+                                <i class="fab fa-js"></i>
+                                <span>الإدارة | JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="تطبيق الطقس" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">تطبيق توقعات الطقس</div>
+                            <p class="project-desc">تطبيق طقس في الوقت الحقيقي يستخدم تكامل API والموقع الجغرافي وتحديثات DOM الديناميكية مع حالات التحميل.</p>
+                            <a href="../freeCodeCamp/Weather-App/Weather-App.html" target="_blank" rel="noopener noreferrer" class="btn-outline">تجربة حية</a>
+                            <div class="repo-link">
+                                <i class="fas fa-cloud"></i>
+                                <span>API الطقس | Async/Await</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="محول Markdown" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">محول Markdown إلى HTML</div>
+                            <p class="project-desc">محرر Markdown في الوقت الحقيقي مع المعاينة الحية وإبراز Syntax ودعم ميزات Markdown الشائعة.</p>
+                            <a href="../freeCodeCamp/Markdown-HTML-Converter/Markdown-HTML-Converter.html" target="_blank" rel="noopener noreferrer" class="btn-outline">تجربة حية</a>
+                            <div class="repo-link">
+                                <i class="fab fa-js"></i>
+                                <span>المحول | JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="آلة الطبل" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">آلة الطبل</div>
+                            <p class="project-desc">آلة طبل تفاعلية مع تخليق الصوت وتسلسل الإيقاع وقدرات تشغيل الصوت.</p>
+                            <a href="../freeCodeCamp/Drum-Machine/Drum-Machine.html" target="_blank" rel="noopener noreferrer" class="btn-outline">تجربة حية</a>
+                            <div class="repo-link">
+                                <i class="fab fa-js"></i>
+                                <span>الآلة | JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="محول العملات" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">محول العملات</div>
+                            <p class="project-desc">تطبيق تحويل العملات في الوقت الحقيقي باستخدام تكامل API مع عملات متعددة وأسعار الصرف.</p>
+                            <a href="../freeCodeCamp/Currency-Converter/Currency-Converter.html" target="_blank" rel="noopener noreferrer" class="btn-outline">تجربة حية</a>
+                            <div class="repo-link">
+                                <i class="fab fa-js"></i>
+                                <span>تكامل API | JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="لعبة Tic-Tac-Toe" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-title">لعبة Tic-Tac-Toe</div>
+                            <p class="project-desc">لعبة Tic-Tac-Toe تفاعلية مع وضع لاعبين اثنين وكشف الفوز وتتبع النقاط وواجهة مستخدم متجاوبة.</p>
+                            <a href="../freeCodeCamp/Tic-Tac-Toe-Game/Tic-Tac-Toe.html" target="_blank" rel="noopener noreferrer" class="btn-outline">تجربة حية</a>
+                            <div class="repo-link">
+                                <i class="fab fa-js"></i>
+                                <span>اللعبة | JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- إحصائيات -->
+    <section class="section statistics-section">
+        <div class="container">
+            <h2 class="section-title">إحصائيات</h2>
+            <div class="skills-container">
+                
+                <div class="skill-card stat-card">
+                    <div class="skill-icon">📝</div>
+                    <h3 class="stat-number">50+</h3>
+                    <p class="stat-label">تم إكمالها من تمارين البرمجة</p>
+                </div>
+                
+                <div class="skill-card stat-card">
+                    <div class="skill-icon">⭐</div>
+                    <h3 class="stat-number">10+</h3>
+                    <p class="stat-label">تم إنشاء المشاريع</p>
+                </div>
+                
+                <div class="skill-card stat-card">
+                    <div class="skill-icon">🎯</div>
+                    <h3 class="stat-number">3</h3>
+                    <p class="stat-label">الشهادات المكتسبة</p>
+                </div>
+                
+                <div class="skill-card stat-card">
+                    <div class="skill-icon">⏱️</div>
+                    <h3 class="stat-number">300+</h3>
+                    <p class="stat-label">ساعات الدراسة</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- تذييل الصفحة -->
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="footer-arabic">رَبِّ زِدْنَا عِلْمًا</div>
+            <p class="footer-quote">Rabbim, ilmimizi arttır.</p>
+            
+            <div class="social-links">
+                <a href="http://linktr.ee/eslemnur" target="_blank" rel="noopener noreferrer" class="social-link" title="Linktree" aria-label="ملف Linktree">
+                    <i class="fas fa-link"></i>
+                </a>
+                <a href=".." target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub" aria-label="ملف GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.freecodecamp.org/eslemnur" target="_blank" rel="noopener noreferrer" class="social-link" title="Free Code Camp" aria-label="ملف Free Code Camp">
+                    <i class="fas fa-code"></i>
+                </a>
+                <a href="https://ko-fi.com/eslemnur_notes" target="_blank" rel="noopener noreferrer" class="social-link" title="Ko-fi" aria-label="ادعمني على Ko-fi">
+                    <i class="fas fa-coffee"></i>
+                </a>
+                
+                <!-- نسخ البريد الإلكتروني -->
+                <div class="email-copy-wrapper" onclick="copyEmail()" role="button" tabindex="0" aria-label="نسخ عنوان البريد الإلكتروني" title="انقر لنسخ عنوان البريد الإلكتروني">
+                    <span class="social-link email-button">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span class="email-address">eslemnur-official@proton.me</span>
+                    <span class="copy-feedback" id="copyFeedback">تم النسخ!</span>
+                </div>
+            </div>
+
+            <p class="copyright">© <span id="current-year"></span> أسلم نورتشيتين. جميع الحقوق محفوظة.</p>
+            <p class="legal-note">
+                مشاريع Free Code Camp مفتوحة المصدر | عرض على GitHub
+            </p>
+
+            <p class="back-to-home">
+                <a href="https://eslemnur.github.io/official/ar.html" class="btn-outline">
+                    <i class="fas fa-arrow-left"></i> العودة إلى الصفحة الرئيسية
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

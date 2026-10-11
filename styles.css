@@ -1,34 +1,47 @@
 /* ============================================
    ESLEM NUR | İLİM VE KOD - GLOBAL STYLES
    Tüm Diller İçin Ortak CSS
+   Ana Portfolyo Renk Paleti ile Uyumlu
    ============================================ */
 
 :root {
-    --primary-color: #B76E79;
+    /* Ana Portfolyo Renk Paleti (#A06872) */
+    --primary-color: #A06872;
+    --primary-dark: #8E5A65;
+    --primary-light: #CC8E98;
     --secondary-color: #FDF5E6;
+    --accent-color: #9E7F7F;
+    --accent-warm: #E6C9C9;
+    --accent-cool: #D8C3CD;
     --button-bg: #D4A5A5;
     --button-hover: #C58F8F;
-    --accent-color: #9E7F7F;
+    --button-active: #B77F7F;
     --bg-color: #FFF9F9;
     --card-bg: #FFFFFF;
     --text-color: #4E342E;
     --text-light: #8D6E63;
+    --text-muted: #A89080;
     --border-color: #F0E6E6;
     --note-bg: #FFF0F5;
-    --soft-shadow: 0 4px 15px rgba(183, 110, 121, 0.15);
+    --soft-shadow: 0 8px 25px rgba(160, 104, 114, 0.2);
     --header-bg: rgba(255, 249, 249, 0.95);
 }
 
 [data-theme="dark"] {
-    --primary-color: #E08E98;
+    /* Dark Mode - Ana Sitede Eşleşti */
+    --primary-color: #CC8E98;
+    --primary-dark: #A06872;
+    --primary-light: #E0A4AC;
     --secondary-color: #2D2D2D;
     --button-bg: #A07070;
     --button-hover: #805050;
+    --button-active: #6D4A4A;
     --accent-color: #C0A0A0;
     --bg-color: #1A1A1A;
     --card-bg: #252525;
     --text-color: #EAEAEA;
     --text-light: #B0B0B0;
+    --text-muted: #808080;
     --border-color: #444444;
     --note-bg: #333333;
     --soft-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -159,8 +172,8 @@ nav {
 .hero-subtitle { font-size: 1.2rem; color: var(--text-light); margin-bottom: 30px; font-family: 'Inter', 'Segoe UI', sans-serif !important; font-weight: 300 !important; letter-spacing: 0.5px !important; }
 .hero-badges { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap; padding: 0 10px; max-width: 100%; }
 .badge { background: var(--note-bg); color: var(--accent-color); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; border: 1px solid var(--border-color); }
-.btn-primary { display: inline-block; padding: 12px 35px; background-color: var(--primary-color); color: white; border-radius: 30px; font-weight: 600; box-shadow: 0 4px 15px rgba(183, 110, 121, 0.3); transition: all 0.3s ease; }
-.btn-primary:hover { background-color: var(--button-hover); transform: translateY(-3px); box-shadow: 0 6px 20px rgba(183, 110, 121, 0.4); }
+.btn-primary { display: inline-block; padding: 12px 35px; background-color: var(--primary-color); color: white; border-radius: 30px; font-weight: 600; box-shadow: 0 4px 15px rgba(160, 104, 114, 0.3); transition: all 0.3s ease; }
+.btn-primary:hover { background-color: var(--button-hover); transform: translateY(-3px); box-shadow: 0 6px 20px rgba(160, 104, 114, 0.4); }
 
 /* --- Genel Section --- */
 .section { padding: 80px 0; }
@@ -187,7 +200,7 @@ nav {
 /* --- Projeler ve Shop --- */
 .projects-grid, .shop-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 .project-card, .shop-card { background: var(--card-bg); border-radius: 20px; box-shadow: var(--soft-shadow); overflow: hidden; border: 1px solid var(--border-color); transition: all 0.3s ease; display: flex; flex-direction: column; }
-.project-card:hover, .shop-card:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(183, 110, 121, 0.25); }
+.project-card:hover, .shop-card:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(160, 104, 114, 0.25); }
 .project-img, .shop-img { height: 180px; background-color: #f0f0f0; overflow: hidden; }
 .project-img img, .shop-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
 .project-card:hover .project-img img, .shop-card:hover .shop-img img { transform: scale(1.1); }
@@ -195,7 +208,7 @@ nav {
 .project-title, .shop-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--primary-color); margin-bottom: 10px; }
 .project-desc, .shop-desc { font-size: 0.95rem; color: var(--text-light); margin-bottom: 20px; flex-grow: 1; }
 .btn-outline { display: inline-block; padding: 8px 25px; border: 2px solid var(--primary-color); color: var(--primary-color); border-radius: 25px; font-weight: 600; font-size: 0.9rem; text-align: center; transition: all 0.3s; text-decoration: none; }
-.btn-outline:hover { background-color: var(--primary-color); color: white; box-shadow: 0 4px 10px rgba(183, 110, 121, 0.4); }
+.btn-outline:hover { background-color: var(--primary-color); color: white; box-shadow: 0 4px 10px rgba(160, 104, 114, 0.4); }
 
 /* --- Footer --- */
 footer { background: var(--card-bg); border-top: 1px solid var(--border-color); padding: 60px 0 30px; text-align: center; margin-top: 80px; }
@@ -207,8 +220,106 @@ footer { background: var(--card-bg); border-top: 1px solid var(--border-color); 
 .copyright { font-size: 0.85rem; color: var(--text-light); opacity: 0.8; }
 
 /* --- Sekme Butonları --- */
-.tab-btn.active { background: var(--primary-color); color: white; border-color: var(--primary-color); box-shadow: 0 4px 10px rgba(183, 110, 121, 0.3); }
-.tab-btn:hover:not(.active) { background: var(--note-bg); color: var(--primary-color); border-color: var(--primary-color); }
+/* ============================================
+   TAB BUTTON STYLES (Skills & Projects & Shop)
+   ============================================ */
+
+/* Base Tab Button Style */
+.tab-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 25px;
+    border: 2px solid var(--border-color);
+    background: transparent;
+    color: var(--text-light);
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    font-family: 'Lato', sans-serif;
+    outline: none;
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+.tab-btn:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(160, 104, 114, 0.2);
+}
+
+/* Active State */
+.tab-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 10px rgba(160, 104, 114, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Hover State (Not Active) */
+.tab-btn:hover:not(.active) {
+    background: var(--note-bg);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Disabled State (Optional) */
+.tab-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Tab Controls Container */
+.tab-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+/* Tab Group Visibility */
+.skill-group,
+.project-group,
+.shop-group {
+    animation: fadeIn 0.5s ease;
+}
+
+.skill-group.hidden,
+.project-group.hidden,
+.shop-group.hidden {
+    display: none !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Tab Buttons */
+@media (max-width: 768px) {
+    .tab-btn {
+        padding: 8px 18px;
+        font-size: 0.85rem;
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .tab-controls {
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+}
 .project-group, .shop-group, .skill-group { animation: fadeIn 0.5s ease; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -309,10 +420,6 @@ strong { font-family: 'Lato', 'Segoe UI', sans-serif; font-weight: 700; -webkit-
     color: var(--primary-color);
 }
 
-.star:hover {
-    color: var(--primary-color);
-}
-
 /* --- ARAPÇA İÇİN RTL DÜZELTMELERİ --- */
 [dir="rtl"] body {
     font-family: 'Amiri', 'Scheherazade New', 'Inter', sans-serif;
@@ -345,11 +452,6 @@ strong { font-family: 'Lato', 'Segoe UI', sans-serif; font-weight: 700; -webkit-
 
 [dir="rtl"] strong {
     font-family: 'Amiri', 'Lato', sans-serif;
-}
-
-/* Arapça yıldız rating için RTL */
-[dir="rtl"] .arabic-rating .star-rating {
-    direction: rtl;
 }
 
 /* Arapça skill listesinde bullet sağda */
@@ -387,38 +489,31 @@ strong { font-family: 'Lato', 'Segoe UI', sans-serif; font-weight: 700; -webkit-
     gap: 30px !important;
 }
 
+/* Trademark & Brand Badge */
 .trademark-notice {
     font-size: 0.9rem;
-    color: var(--text-light, #666);
+    color: var(--text-light);
     margin: 8px 0;
-}
-
-.dark-mode .trademark-notice {
-    color: var(--text-light-dark, #aaa);
 }
 
 .brand-badge {
     display: inline-block;
-    /* background: rgba(109, 74, 175, 0.1); */
     padding: 4px 10px;
     border-radius: 4px;
     font-size: 0.85rem;
-    color: var(--primary-color, #6d4aff);
+    color: var(--primary-color);
+    background: rgba(160, 104, 114, 0.1);
 }
 
 .separator {
     margin: 0 8px;
-    color: var(--text-muted, #ccc);
+    color: var(--text-muted);
 }
 
 .legal-note {
     font-size: 0.75rem;
-    color: var(--text-muted, #999);
+    color: var(--text-muted);
     margin: 8px 0 0;
-}
-
-.dark-mode .legal-note {
-    color: var(--text-muted-dark, #777);
 }
 
 /* Logo arabic reference button */
@@ -433,39 +528,39 @@ strong { font-family: 'Lato', 'Segoe UI', sans-serif; font-weight: 700; -webkit-
 }
 
 /* FCC Sayfasına Özel Ek Stiller */
-        .fcc-hero {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        }
-        
-        .code-badge {
-            background: #2D2D2D;
-            color: #F8DC74;
-            font-family: 'Courier New', monospace;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            margin-right: 8px;
-        }
-        
-        .language-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: white;
-            margin-bottom: 15px;
-        }
-        
-        .python-bg { background: linear-gradient(135deg, #3776AB, #FFD43B); }
-        .csharp-bg { background: linear-gradient(135deg, #9B59B6, #8E44AD); }
-        .javascript-bg { background: linear-gradient(135deg, #F7DF1E, #E8C400); }
-        .html-bg { background: linear-gradient(135deg, #E34F26, #D35400); }
-        .css-bg { background: linear-gradient(135deg, #1572B6, #0D6EAF); }
-        
-        /* --- REPO LINK STYLE (Ana & FCC Uyumlu) --- */
+.fcc-hero {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.code-badge {
+    background: #2D2D2D;
+    color: #F8DC74;
+    font-family: 'Courier New', monospace;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    margin-right: 8px;
+}
+
+.language-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.python-bg { background: linear-gradient(135deg, #3776AB, #FFD43B); }
+.csharp-bg { background: linear-gradient(135deg, #9B59B6, #8E44AD); }
+.javascript-bg { background: linear-gradient(135deg, #F7DF1E, #E8C400); }
+.html-bg { background: linear-gradient(135deg, #E34F26, #D35400); }
+.css-bg { background: linear-gradient(135deg, #1572B6, #0D6EAF); }
+
+/* --- REPO LINK STYLE (Ana & FCC Uyumlu) --- */
 .repo-link {
     display: inline-flex;
     align-items: center;
@@ -499,3 +594,155 @@ strong { font-family: 'Lato', 'Segoe UI', sans-serif; font-weight: 700; -webkit-
 .repo-link .fa-layer-group { color: #000000; }
 .repo-link .fa-calendar-alt { color: #00BCD4; }
 .repo-link .fa-hand-sparkles { color: #4CAF50; }
+
+/* Hero Actions - Inline Stillardan Kaçın */
+.hero-actions {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+/* Tab Controls - Ana Sitedeki gibi */
+.tab-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+/* Hidden Class - display: none yerine */
+.hidden {
+    display: none !important;
+}
+
+/* Statistics Section */
+.statistics-section {
+    background: var(--note-bg);
+}
+
+.stat-card {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+.stat-label {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Footer Back Button */
+.back-to-home {
+    margin: 15px 0 0;
+}
+
+.back-to-home .btn-outline {
+    font-size: 0.8rem;
+    padding: 8px 20px;
+}
+
+/* Language Icon Fix for Header */
+.lang-dropdown .theme-toggle {
+    font-size: 1rem;
+}
+
+/* Responsive Hero Buttons */
+@media (max-width: 768px) {
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .hero-actions .btn-primary {
+        max-width: 100%;
+    }
+}
+
+/* ============================================
+   EMAIL COPY FUNCTIONALITY
+   ============================================ */
+
+.email-copy-wrapper {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.email-button {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.email-button:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: rotate(10deg);
+}
+
+.email-address {
+    margin-right: 10px;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+}
+
+.copy-feedback {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+[dir="rtl"] .email-address {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+[dir="rtl"] .copy-feedback {
+    left: auto;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+/* Section Description */
+.section-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.7;
+}

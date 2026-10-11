@@ -1,21 +1,18 @@
-// scripts-fcc.js - Sadece FCC sayfası için
-let ratingInitialized = false;
-let themeInitialized = false;
-let menuInitialized = false;
+// ============================================
+// ESLEM NUR | FCC PROJE SAYFASI - SCRIPTS
+// Ana Portfolyo Sitesi ile Uyumlu
+// ============================================
 
 // --- TEMA YÖNETİMİ ---
 function initTheme() {
-    if (themeInitialized) return;
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
-    themeInitialized = true;
 }
 
 function updateThemeIcon(theme) {
     const icon = document.querySelector('#themeToggle i');
-    const btn = document.querySelector('#themeToggle');
-    if (icon && btn) {
+    if (icon) {
         if (theme === 'light') {
             icon.className = 'fas fa-moon';
         } else {
@@ -60,7 +57,7 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// --- SEKME YÖNETİMİ ---
+// --- SEKME YÖNETİMİ (Skills) ---
 function switchSkillTab(tabName) {
     const buttons = document.querySelectorAll('#skills .skill-tab-btn');
     const groups = document.querySelectorAll('#skills .skill-group');
@@ -69,14 +66,21 @@ function switchSkillTab(tabName) {
         btn.classList.remove('active');
         btn.setAttribute('aria-selected', 'false');
     });
-    groups.forEach(group => group.style.display = 'none');
+    groups.forEach(group => group.classList.add('hidden'));
 
     const targetGroup = document.getElementById('group-' + tabName);
+    const targetBtn = Array.from(buttons).find(b => b.getAttribute('onclick').includes(`'${tabName}'`));
+    
     if (targetGroup) {
-        targetGroup.style.display = 'grid';
+        targetGroup.classList.remove('hidden');
+    }
+    if (targetBtn) {
+        targetBtn.classList.add('active');
+        targetBtn.setAttribute('aria-selected', 'true');
     }
 }
 
+// --- SEKME YÖNETİMİ (Projects) ---
 function switchProjectTab(tabName) {
     const buttons = document.querySelectorAll('#projects .project-tab-btn');
     const groups = document.querySelectorAll('#projects .project-group');
@@ -85,12 +89,18 @@ function switchProjectTab(tabName) {
         btn.classList.remove('active');
         btn.setAttribute('aria-selected', 'false');
     });
-    groups.forEach(group => group.style.display = 'none');
+    groups.forEach(group => group.classList.add('hidden'));
 
     const targetGroup = document.getElementById('group-' + tabName);
+    const targetBtn = Array.from(buttons).find(b => b.getAttribute('onclick').includes(`'${tabName}'`));
+    
     if (targetGroup) {
-        targetGroup.style.display = 'grid';
-        localStorage.setItem('lastFCCProjectTab', tabName); // Farklı key
+        targetGroup.classList.remove('hidden');
+        localStorage.setItem('lastFCCProjectTab', tabName);
+    }
+    if (targetBtn) {
+        targetBtn.classList.add('active');
+        targetBtn.setAttribute('aria-selected', 'true');
     }
 }
 
@@ -100,15 +110,63 @@ function updateYear() {
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 }
 
+// --- EMAIL KOPYALAMA ---
+function copyEmail() {
+    const email = 'eslemnur-official@proton.me';
+    const feedback = document.getElementById('copyFeedback');
+    
+    if (!feedback) return;
+    
+    navigator.clipboard.writeText(email).then(() => {
+        feedback.style.opacity = '1';
+        
+        const lang = document.documentElement.lang || 'tr';
+        
+        switch(lang) {
+            case 'en':
+                feedback.textContent = 'Copied!';
+                break;
+            case 'de':
+                feedback.textContent = 'Kopiert!';
+                break;
+            case 'fr':
+                feedback.textContent = 'Copié!';
+                break;
+            case 'ar':
+                feedback.textContent = 'نُسِخَ!';
+                break;
+            default:
+                feedback.textContent = 'Kopyalandı!';
+        }
+        
+        setTimeout(() => {
+            feedback.style.opacity = '0';
+        }, 2000);
+    }).catch(err => {
+        console.error('Kopyalama hatası:', err);
+        const tempInput = document.createElement('textarea');
+        tempInput.value = email;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        
+        feedback.style.opacity = '1';
+        setTimeout(() => {
+            feedback.style.opacity = '0';
+        }, 2000);
+    });
+}
+
 // --- SAYFA YÜKLENDİĞİNDE ---
 document.addEventListener('DOMContentLoaded', () => {
-    // Project tabs
+    // Project tabs restore
     const savedProjectTab = localStorage.getItem('lastFCCProjectTab');
     const projectBtns = document.querySelectorAll('#projects .project-tab-btn');
     const projectGroups = document.querySelectorAll('#projects .project-group');
 
     if (projectGroups.length > 0) {
-        projectGroups.forEach(g => g.style.display = 'none');
+        projectGroups.forEach(g => g.classList.add('hidden'));
         projectBtns.forEach(b => {
             b.classList.remove('active');
             b.setAttribute('aria-selected', 'false');
@@ -120,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (btn && grp) {
                 btn.classList.add('active');
                 btn.setAttribute('aria-selected', 'true');
-                grp.style.display = 'grid';
+                grp.classList.remove('hidden');
             }
         } else {
             const defBtn = Array.from(projectBtns).find(b => b.getAttribute('onclick').includes("'python'"));
@@ -128,17 +186,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if (defBtn && defGrp) {
                 defBtn.classList.add('active');
                 defBtn.setAttribute('aria-selected', 'true');
-                defGrp.style.display = 'grid';
+                defGrp.classList.remove('hidden');
             }
         }
     }
 
-    // Skill tabs
+    // Skill tabs initialize
     const skillBtns = document.querySelectorAll('#skills .skill-tab-btn');
     const skillGroups = document.querySelectorAll('#skills .skill-group');
     
     if (skillGroups.length > 0) {
-        skillGroups.forEach(g => g.style.display = 'none');
+        skillGroups.forEach(g => g.classList.add('hidden'));
         skillBtns.forEach(b => {
             b.classList.remove('active');
             b.setAttribute('aria-selected', 'false');
@@ -149,11 +207,23 @@ document.addEventListener('DOMContentLoaded', () => {
         if (defBtn && defGrp) {
             defBtn.classList.add('active');
             defBtn.setAttribute('aria-selected', 'true');
-            defGrp.style.display = 'grid';
+            defGrp.classList.remove('hidden');
         }
     }
 
+    // Initialize theme
     initTheme();
     initThemeToggle();
     updateYear();
+    
+    // Enter key support for email copy
+    const emailWrapper = document.querySelector('.email-copy-wrapper');
+    if (emailWrapper) {
+        emailWrapper.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                copyEmail();
+            }
+        });
+    }
 });
