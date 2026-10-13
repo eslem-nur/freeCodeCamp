@@ -22,6 +22,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- PWA Manifest Ekleme -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/freeCodeCamp/PWA/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/freeCodeCamp/PWA/favicon-96x96.png" />
+    <link rel="manifest" href="/freeCodeCamp/PWA/site.webmanifest" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" type="image/svg+xml" href="/freeCodeCamp/PWA/favicon.svg" />
+    <link rel="shortcut icon" href="/freeCodeCamp/PWA/favicon.ico" />
+
+    <!-- PWA Service Worker Kaydı -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/freeCodeCamp/PWA/sw.js', { scope: '/freeCodeCamp/' })
+            .then(reg => console.log('Service Worker başarıyla kaydedildi!', reg.scope))
+            .catch(err => console.log('Service Worker kaydı başarısız:', err));
+        });
+      }
+    </script>
+
 </head>
 <body>
 
